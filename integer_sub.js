@@ -17,8 +17,9 @@ const execute = async () => {
 		conso
 	}*/
 	//var bytes = iota.utils.transactionObject(resp.message)
-	console.log(resp.messages)
-	console.log(resp.nextRoot)
+	for msg in resp.messages:
+		console.log(iota.utils.fromTrytes(msg))
+	//console.log(resp.nextRoot)
 }
 
 execute()
